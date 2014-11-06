@@ -40,10 +40,12 @@ $( document ).ready(function() {
 			var minutes = Math.floor((distance % _hour) / _minute);
 			var seconds = Math.floor((distance % _minute) / _second);
 			
-			document.getElementById('countdown').innerHTML = days + 'days ';
-			document.getElementById('countdown').innerHTML += hours + 'hrs ';
-			document.getElementById('countdown').innerHTML += minutes + 'mins ';
-			document.getElementById('countdown').innerHTML += seconds + 'secs';
+			document.getElementById('countdown').innerHTML = '<div class="day">'+days + 'days</div> ';
+			document.getElementById('countdown').innerHTML += '<div class="time">'+hours + ':' + minutes + ':' + seconds + '</div>';
+
+			
+			
+			
 			}
 			
 			timer = setInterval(showRemaining, 1000);
